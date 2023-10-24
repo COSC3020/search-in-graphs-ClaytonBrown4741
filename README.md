@@ -25,3 +25,9 @@ answer, including your reasoning, to this markdown file.
 ## Bonus
 
 Implement and analyze breadth-first search.
+
+## QUESTION:  
+For this graph, are we allowed to assume that the nodes will always be numbers as opposed to names or characters?  
+Additionally, do we have to follow the pseudocode exactly as written, or can we change it up if we want?  
+So for instance, instead of doing a while loop, I could use a for loop if I find it suits my needs better.  
+Any help you could give me concerning these questions would be greatly appreciated. Thank you.
