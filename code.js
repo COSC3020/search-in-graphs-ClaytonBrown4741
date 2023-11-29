@@ -1,13 +1,20 @@
-//function depthFirstSearch(graph, startNode, targetNode){
 function depthFirstSearch(graph, start, target){
+	nodeFound=false
+	visitedNodes=[]
+	currentPath=[]
 	for (var i=0; i<graph.length;i++){
 		visitedNodes[i]=false;
 	}
-	return dfs(graph, start, target, visitedNodes);
+	dfs(graph, start, target, visitedNodes);
+	if (nodeFound==true){
+		return currentPath
+	}
+	else
+		return []
 }
 
 function dfs(graph, start, target, visited){
-	console.log(start);
+	//console.log(start);
 	var allSearched=true;
 	for (var i=0; i<graph.length;i++){
 		if (visited[i]==false)
@@ -35,9 +42,3 @@ function dfs(graph, start, target, visited){
 var visitedNodes=[];
 var currentPath = [];
 var nodeFound=false;
-console.log(depthFirstSearch([[1],[0,3],[0,1],[0,1,2,3]], 0, 2))
-console.log(nodeFound);
-if (nodeFound==true)
-	console.log(currentPath)
-else
-	console.log([])
