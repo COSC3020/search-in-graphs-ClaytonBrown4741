@@ -41,4 +41,8 @@ So, if we combine all this together, we get a worst case runtime of $\Theta(|V|+
 which of course simplifies to $\Theta(|V|+|E|)$  
 NOTE: I am still a *little* rusty when it comes to runtime analyses for graphs, so please don't  
 hesitate to let me know if any of my reasoning or logic was off and I'll fix it right away. Thank  
-you!
+you!  
+**QUESTION**: After looking through this code again, it seems as though the loop that checks whether  
+all the nodes have been visited is ran every time the code visits a new node. So because of that, would  
+the overall complexity for that actually be $|V|^2$? And if that is the case, wouldn't the new runtime  
+analysis be $\Theta(|V|^2 + |E|)$ for this specific code?
