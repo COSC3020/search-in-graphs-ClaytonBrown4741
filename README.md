@@ -27,7 +27,5 @@ answer, including your reasoning, to this markdown file.
 Implement and analyze breadth-first search.
 
 **Please note that I am not yet finished with this project**  
-At the moment, the search itself works (as far as I can tell), but further tests are needed  
-to be known for certain. Additionally, the code and output is still rather messy.  
-I plan to do both the testing and the clean up at a later date, but I wanted to post this here  
-to show that I am, indeed, making progress on the projects.
+AUTOMATIC TESTING HAS NOW BEEN ADDED. WILL DO RECURRENCE ANALYSIS AT A  
+LATER DATE
