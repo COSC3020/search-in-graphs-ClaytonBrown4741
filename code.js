@@ -14,12 +14,8 @@ function depthFirstSearch(graph, start, target){
 }
 
 function dfs(graph, start, target, visited){
-	//console.log(start);
 	var allSearched=true;
-	for (var i=0; i<graph.length;i++){
-		if (visited[i]==false)
-			allSearched=false;
-	}
+	allSearched=(!visited.includes(false))
 	if (allSearched==true){
 		currentPath=[]
 		return visitedNodes
