@@ -35,13 +35,8 @@ actual graph. Looking at this, it becomes clear that this loop will end up going
 node once and *only* once due to us keeping track of the number of visited nodes. Additionally,  
 this loop will also go through every edge of the graph at least once in order to check if it  
 leads to the desired node. So as a result, this will take |V|+|E| amount of time.  
-Finally, there is also the line where I check to make sure that all of the nodes are visited (line 18).  
-This will ultimately take |V| amount of time, and because it is repeated for every node, the  
-final time for this step would be $|V|^2$. In hindsight, this runtime could have been reduced  
-by simply using an additional counter variable to keep track of how many nodes have been visited.  
-This way, I'd only have to check whether the counter variable was equal to the amount of nodes  
-that existed in order to know whether they had all been visited or not. This would drop the  
-runtime of this step down to |V|. If you would like me to go and add this improvement to my code, just  
-let me know and I will.  
-So, if we combine all this together, we get a worst case runtime of $\Theta(|V|^2+|V|+|V|+|E|)$  
-which of course simplifies to $\Theta(|V|^2+|E|)$  
+Finally, there is also the line where I check to make sure that all of the nodes are visited.  
+This should *finally* be done in a smaller amount of time, which means that it no longer  
+greatly effects the overall aymptotic runtime of the program.  
+So, if we combine all this together, we get a worst case runtime of $\Theta(|V|+|V|+|E|)$  
+which of course simplifies to $\Theta(|V|+|E|)$  
