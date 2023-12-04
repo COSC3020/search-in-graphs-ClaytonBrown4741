@@ -25,3 +25,18 @@ answer, including your reasoning, to this markdown file.
 ## Bonus
 
 Implement and analyze breadth-first search.
+
+**ANSWER:**  
+Going through this step by step, we must first account for the initialization of the  
+"visitedNodes" variable. This will take |V| amount of time, since it has to go over every  
+node.  
+Additionally, we must also take into account the final loop at the bottom that searches through the  
+actual graph. Looking at this, it becomes clear that this loop will end up going through every  
+node once and *only* once due to us keeping track of the number of visited nodes. Additionally,  
+this loop will also go through every edge of the graph at least once in order to check if it  
+leads to the desired node. So as a result, this will take |V|+|E| amount of time.  
+Finally, there is also the line where I check to make sure that all of the nodes are visited.  
+This should *finally* be done in a smaller amount of time, which means that it no longer  
+greatly effects the overall aymptotic runtime of the program.  
+So, if we combine all this together, we get a worst case runtime of $\Theta(|V|+|V|+|E|)$  
+which of course simplifies to $\Theta(|V|+|E|)$  
