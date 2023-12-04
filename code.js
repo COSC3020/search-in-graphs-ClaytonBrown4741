@@ -1,5 +1,6 @@
 function depthFirstSearch(graph, start, target){
 	nodeFound=false
+	visitedNodeCounter=0
 	visitedNodes=[]
 	currentPath=[]
 	for (var i=0; i<graph.length;i++){
@@ -15,8 +16,7 @@ function depthFirstSearch(graph, start, target){
 
 function dfs(graph, start, target, visited){
 	var allSearched=true;
-	allSearched=(!visited.includes(false))
-	if (allSearched==true){
+	if (visitedNodeCounter==visited.length){
 		currentPath=[]
 		return visitedNodes
 	}
@@ -28,6 +28,7 @@ function dfs(graph, start, target, visited){
 	visited[start]=true;
 	for (var i=0; i< graph[start].length; i++){
 		if(visited[graph[start][i]]==false){
+			visitedNodeCounter=visitedNodeCounter+1
 			return dfs(graph, graph[start][i], target, visited)
 		}
 	}
@@ -38,3 +39,4 @@ function dfs(graph, start, target, visited){
 var visitedNodes=[];
 var currentPath = [];
 var nodeFound=false;
+var visitedNodeCounter=0;
